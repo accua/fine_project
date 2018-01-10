@@ -1,0 +1,19 @@
+machine:
+
+  timezone:
+    America/Los_Angeles # Set the timezone
+
+  # Version of ruby to use
+  ruby:
+    version:
+      2.3.1
+
+dependencies:
+  pre:
+    - gem install rails -v 5.0
+    - rails new fae_test
+    - cd fae_test
+    - cp ../Gemfile .
+    - bundle install
+    - rails g fae:install
+    - rails s
